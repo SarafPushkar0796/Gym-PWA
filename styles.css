@@ -1,0 +1,80 @@
+/* Restricting horizontal scroll */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#heading{
+	font-family: 'Merriweather', serif;
+	font-size: 55px;
+}
+
+#subheading{
+	font-family: 'Playfair Display', serif;
+	font-size: 25px;
+}
+
+#message{
+	font-family: 'Playfair Display', serif;
+	font-size: 15px;
+}
+
+.pwa{
+	font-family: 'Playfair Display', serif;
+	font-size: 20px;
+}
+
+.pwa-name{font-size: 40px;}
+
+#pwa-def{
+	font-family: 'Playfair Display', serif;
+	font-size: 20px;
+}
+
+/* Service page animation */
+
+#slider-msg{
+	margin-top: 56px;
+	transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+
+.slide-in-msg{
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+#slider{
+	margin-top: 0px;
+	position: absolute;
+	transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+
+.slide-in {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+/* Slide-in animation */
+
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+
+.user-setup{
+	margin-top: 56px;
+	font-family: 'Playfair Display', serif;
+	font-size: 25px;
+}
+
+.workout-diet{
+	font-family: 'Playfair Display', serif;
+	font-size: 20px;
+}
+
+@media only screen and (max-width: 480px){}
