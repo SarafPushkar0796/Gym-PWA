@@ -77,4 +77,12 @@ html, body {
 	font-size: 20px;
 }
 
-@media only screen and (max-width: 480px){}
+ul{font-family: 'Playfair Display', serif;}
+
+/* Hiding navbar in desktop mode */
+nav{visibility: hidden;}
+
+@media only screen and (max-width: 480px){
+	nav{visibility: visible;}
+	.sticky-nav{z-index: 100;position: fixed;top: 0;left: 0;right: 0;}
+}
