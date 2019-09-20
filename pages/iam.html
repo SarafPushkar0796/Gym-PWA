@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+	<!-- Favicon -->
+	<link rel="icon" href="../images/favicon.png" type="image/x-icon"/>
+
+	<!-- Google Playfair & Merriweather Font -->
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display&display=swap" rel="stylesheet">
+
+	<!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Material Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<title>I am..</title>
+	<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row" style="margin-top: 56px">
+			<div class="col s12">
+				<center><img src="../images/user.png" style="width: 100px; height: 100px;"></center>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 user-setup">
+				I am...
+				<form action="#">
+					<div id="myradiobuttonlist">
+						<p>
+							<label>
+								<input class="with-gap" name="group3" type="radio" value="male" checked/>
+								<span>Male</span>
+							</label>
+						</p>
+						<p>
+							<label>
+								<input class="with-gap" name="group3" type="radio" value="female" />
+								<span>Female</span>
+							</label>
+						</p>
+						<p>
+							<label>
+								<input class="with-gap" name="group3" type="radio" value="me" />
+								<span>Me</span>
+							</label>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="row user-setup">
+			<div class="col s12">
+				<center><a id="startButton" class="waves-effect waves-yellow btn-flat" style="font-size: 20px;">Start</a></center>
+			</div>
+		</div>
+	</div>
+
+	<!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$("#startButton").click(function(){
+			    var selectedval = $("input[type='radio']:checked").val();
+			    if(selectedval == "male"){
+			        window.location = "workout-male.html";
+			    } else if (selectedval == "female") {
+			    	window.location = "workout-female.html";
+			    } else if (selectedval == "me") {
+			    	window.location = "workout.html";
+			    } else {
+			    	alert('Please select one.');
+			    }		    
+			});
+    	});
+    </script>
+</body>
+</html>
