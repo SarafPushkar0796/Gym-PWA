@@ -1,0 +1,19 @@
+{
+  "name": "gym-pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarafPushkar0796/Gym-PWA.git"
+  },
+  "author": "Pushkar Saraf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SarafPushkar0796/Gym-PWA/issues"
+  },
+  "homepage": "https://github.com/SarafPushkar0796/Gym-PWA#readme"
+}
