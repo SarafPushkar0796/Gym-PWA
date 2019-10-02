@@ -20,10 +20,14 @@
 
 	<title>Workouts for male</title>
 	<link rel="stylesheet" href="../styles.css">
+	<style type="text/css">
+		#nav{z-index: 9999;}
+		body{background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);}
+	</style>
 </head>
 <body>
 	<!-- navbar -->
-	<nav class="nav-extended white">
+	<nav id="nav" class="nav-extended white">
       <div class="nav-wrapper">
         <div class="container">
           <a href="#" class="sidenav-trigger" data-target="mobile-menu">
@@ -32,11 +36,11 @@
 
           <ul class="center hide-on-med-and-down"></ul>
           <ul class="sidenav white lighten-2" id="mobile-menu">
-            <li class="waves-effect waves-light"><a href="#about" style="font-size: 20px;">About</a></li><br/>
             <li class="waves-effect waves-light"><a href="diet.html" style="font-size: 20px;">Diet</a></li>
             <li class="waves-effect waves-light"><a href="workout-female.html" style="font-size: 20px;">Workout for women</a></li><br/>
             <li class="waves-effect waves-light"><a href="#modal1" class="modal-trigger" style="font-size: 20px;">Rest Timer</a></li><br>
-            <li class="waves-effect waves-light"><a href="../index.html" style="font-size: 20px;">Logout</a></li>
+            <li class="waves-effect waves-light"><a href="../index.html" style="font-size: 20px;">Logout</a></li><br/><hr>
+            <li class="waves-effect waves-light"><a href="#about" style="font-size: 20px;">Developer</a></li><br/>
           </ul>
         </div>
       </div>
@@ -184,33 +188,35 @@
     <script type="text/javascript">
 
     	$(document).ready(function(){
-          $('.sidenav').sidenav().on('click tap', 'li a', () => {
+    		$('.sidenav').sidenav();
+
+          	$('.sidenav').sidenav().on('click tap', 'li a', () => {
           		$('.sidenav').sidenav('close');
         	});
 
-          // sticky-navbar
-          $(window).scroll(function() {
-          	if($(window).scrollTop()>150){
-          		$('nav').addClass('sticky-nav');
-          	} else {
-          		$('nav').removeClass('sticky-nav');
-          	}
-          });
+          	// sticky-navbar
+          	$(window).scroll(function() {
+          		if($(window).scrollTop()>150){
+          			$('nav').addClass('sticky-nav');
+          		} else {
+          			$('nav').removeClass('sticky-nav');
+          		}
+          	});
 
-          // Timer modal
-          $('.modal').modal();
+          	// Timer modal
+          	$('.modal').modal();
 
-          // Timer ( 1-minute )
-          $('#start-btn').click(function(){
-          	setTimeout(function(){
+          	// Timer ( 1-minute )
+          	$('#start-btn').click(function(){
+          		setTimeout(function(){
 
-          		// 'open' is a method
-          		$('#modal2').modal('open');
+          			// 'open' is a method
+          			$('#modal2').modal('open');
           		
-          		// playing audio file
-          		$('audio#pop')[0].play();
-          	},3000);
-          });
+          			// playing audio file
+          			$('audio#pop')[0].play();
+          		},60000); // One minute
+          	});
     	});
     </script>
 </body>
